@@ -1,0 +1,30 @@
+/*
+
+  TYPOGRAPHY.SCSS
+
+  EZOOM
+  Rodrigo Nishino <rodrigo.nishino@ezoom.com.br>
+
+  MOBILE FIRST!
+
+  h1 h2 h3
+  p bold strong
+
+  ESSAS COISAS VC DEFINE AQUI
+
+*/
+
+.pageText
+{
+
+  line-height: 1.6em;
+
+  h2, h3, h4, h5, p
+  {
+    margin-bottom: 32px; // <-- Mobile first
+    @media (min-width: var(--tablet)){ margin-bottom: 48px; }
+  }
+
+
+}
+

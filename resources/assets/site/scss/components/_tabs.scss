@@ -1,0 +1,194 @@
+.common-tabs {
+  // margin-bottom: 1rem;
+
+  .tabs-wrapper {
+    padding: 4rem 0 0;
+    background-color: #FFF;
+
+    &.dark-style {
+      background-color: #1d1d1d;
+
+      .tabs-header {
+        background-color: #232323;
+        box-shadow: 0 8px 10px 0 rgb(0 0 0 / 10%);
+
+        .tabs-item {
+
+          &:hover,
+          &.active {
+            span {
+              color: #FFF;
+            }
+          }
+        }
+      }
+    }
+
+    .tabs-header {
+      box-shadow: 0 8px 10px -8px rgb(0 0 0 / 10%);
+      overflow: auto;
+      white-space: nowrap;
+      text-align: center;
+      min-width: 100%;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tabs-item {
+        padding: 1.5rem 1rem;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+          content: '';
+          @include posbl(0, 0);
+          @include dim(0, 1px);
+          background-color: $main-color;
+          transition: width .2s ease;
+        }
+
+        &.active,
+        &:hover {
+          span {
+            color: $text-color;
+          }
+
+          &::after {
+            width: 100%;
+          }
+        }
+
+        span {
+          @include font-medium;
+          text-transform: uppercase;
+          transition: color .2s ease-in-out;
+          font-size: 14px;
+          color: #ababab;
+        }
+      }
+    }
+
+    .tabs-body {
+      background-color: #1d1d1d;
+      padding: 3rem 1.5rem;
+      position: relative;
+      min-height: 450px;
+
+      @media screen and (min-width: $mobile) {
+        padding: 3rem 5%;
+      }
+
+      .tabs-content {
+        display: none;
+        opacity: 0;
+        transition: opacity .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        &.active {
+          opacity: 1;
+          display: block;
+        }
+
+        .content-wrapper {
+          @media screen and (min-width: $mobile) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+          }
+
+          .content-text {
+            margin-bottom: 1.5rem;
+            display: block;
+            position: relative;
+
+            @media screen and (min-width: $mobile) {
+              width: 50%;
+              padding-right: 3rem;
+            }
+
+            .title {
+              @include font-medium;
+              font-size: 20px;
+              color: #FFF;
+              line-height: 1.5;
+              margin-bottom: 1rem;
+
+              @media screen and (min-width: $mobile) {
+                font-size: 24px;
+              }
+            }
+
+            .common-text {
+              color: #707070;
+            }
+          }
+
+          .content-media {
+            display: block;
+            position: relative;
+            width: 100%;
+
+            @media screen and (min-width: $mobile) {
+              width: 50%;
+            }
+
+            .swiper {
+              .swiper-wrapper {
+                .swiper-slide {
+                  height: 400px;
+
+                  .lazyload {
+                    .lazyload-image {
+                      @include dim(100%, auto);
+                    }
+                  }
+                }
+              }
+
+              .swiper-navigation {
+                .swiper-button {
+                  @include dim(38px, 38px);
+                  transform: translateY(-50%);
+                  margin: 0 .3rem;
+
+                  &::before {
+                    content: '';
+                    @include postl(0, 0);
+                    @include dim(100%, 100%);
+                    background-color: $main-color;
+                    border-radius: 50%;
+                  }
+
+                  &.swiper-button-disabled {
+                    &::before {
+                      background-color: rgba(255, 255, 255, .5);
+                      opacity: 1;
+                    }
+                  }
+
+                  &::after {
+                    content: none;
+                  }
+
+                  svg {
+                    @include dim(16px, 16px);
+                    z-index: 1;
+                  }
+
+                  &.swiper-button-prev {
+                    transform: translateY(-50%) rotate(180deg);
+                    transform-origin: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+
+  }
+}

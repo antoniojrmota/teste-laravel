@@ -1,0 +1,361 @@
+@import '../_variables.scss';
+@import '../_select2.scss';
+
+#assistance {
+  #maps {
+    padding: 6rem 0;
+
+    .maps-wrapper {
+      .map-form {
+        .row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          @media screen and (min-width: $laptop) {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+
+          .field {
+            display: flex;
+            align-items: center;
+
+            border: 1px solid #E0E0E0;
+            border-radius: 5px;
+            padding: .75rem 1rem;
+            margin: .3rem 0;
+            width: 100%;
+
+            @media screen and (min-width: $laptop) {
+              width: unset;
+              margin: .3rem;
+              flex: 1 1 auto;
+            }
+
+            .select2 {
+              min-width: 200px;
+            }
+
+            &.no-attributes {
+              padding: 0;
+              border: none;
+            }
+
+            &.radio-field {
+              margin: .75rem 0 0;
+
+              @media screen and (min-width: $laptop) {
+                margin: 0 0 0 1rem;
+                text-align: center;
+                flex: auto 0 1;
+              }
+            }
+
+            input {
+              @include font-regular;
+              width: 100%;
+              color: $text-color;
+              font-size: 13px;
+
+              &::placeholder {
+                @include font-regular;
+                color: $text-color;
+                font-size: 13px;
+                height: 44px;
+              }
+
+              &[type="radio"] {
+                margin: 0 5px 0 0;
+                @include dim(16px, 16px);
+                position: relative;
+                appearance: none;
+                border: 1px solid rgb(168, 168, 168);
+                border-radius: 50%;
+                display: grid;
+                place-content: center;
+
+                &::before {
+                  content: "";
+                  width: 8px;
+                  height: 8px;
+                  background-color: $main-color;
+                  border-radius: 50%;
+                  transform: scale(0);
+                  transition: 120ms transform ease-in-out;
+                  box-shadow: inset 1em 1em $main-color;
+                }
+
+                &:checked::before {
+                  transform: scale(1);
+                }
+              }
+            }
+
+            label {
+              @include font-regular;
+              color: $text-color;
+              font-size: 13px;
+            }
+
+            svg {
+              margin-right: .75rem;
+
+              path {
+                fill: $main-color;
+              }
+            }
+          }
+
+          .common-button {
+            border-radius: 5px;
+            margin: 1rem 0 1rem;
+
+            @media screen and (min-width: $laptop) {
+              margin-left: 1.5rem;
+            }
+          }
+        }
+      }
+
+      .result-box {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem 0;
+
+        @media screen and (min-width: $mobile) {
+          flex-direction: row;
+          height: 600px;
+        }
+
+        .list-box {
+          @include dim(100%, 100%);
+          margin-bottom: 1rem;
+
+          @media screen and (min-width: $mobile) {
+            width: 30%;
+            min-width: 300px;
+            padding-right: 1rem;
+
+            display: flex;
+            flex-direction: column;
+          }
+
+          .list-title {
+            @include font-regular;
+            font-size: 16px;
+            text-align: center;
+            margin: 2rem 0;
+            padding-left: 1.5rem;
+
+            @media screen and (min-width: $mobile) {
+              font-size: 20px;
+              text-align: left;
+            }
+          }
+
+          .list {
+            @include dim(100%, 400px);
+            overflow: auto;
+
+            @media screen and (min-width: $mobile) {
+              height: auto;
+            }
+
+            .list-item {
+              position: relative;
+              padding: 2rem 1.5rem;
+              display: flex;
+              flex-direction: column;
+              transition: all .2s ease-in-out;
+              cursor: pointer;
+
+              &:not(:last-child) {
+                border-bottom: 1px solid $border-color;
+              }
+
+              &:hover {
+                background: #f1f1f1;
+              }
+
+              &.hide {
+                display: none;
+              }
+
+              .info-box {
+                position: relative;
+                z-index: 2;
+                overflow: hidden;
+
+                .info-box-title {
+                  @include font-medium;
+                  font-size: 16px;
+                  color: $text-color;
+                  line-height: 1.5;
+                }
+
+                .info-box-address {
+                  @include font-regular;
+                  display: table;
+                  font-size: 13px;
+                  color: $text-color;
+                  margin: 1rem 0;
+                  line-height: 1.5;
+                }
+
+                .info-box-contact {
+                  display: table;
+                  color: $text-color;
+                  cursor: pointer;
+                  margin: .3rem 0;
+
+                  svg {
+                    margin-right: .5rem;
+                  }
+
+                  span {
+                    @include font-regular;
+                    font-size: 13px;
+                  }
+
+                  &:hover span {
+                    text-decoration: underline;
+                  }
+                }
+              }
+
+              .info-trace {
+                position: relative;
+                margin: 1rem 0 0;
+
+                a {
+                  margin-right: 1rem;
+                }
+              }
+            }
+          }
+        }
+
+        .map-box {
+          @include dim(100%, 400px);
+          flex-grow: 1;
+
+          @media screen and (min-width: $mobile) {
+            width: 70%;
+            height: 100%;
+          }
+
+          #gmaps {
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.infoTrending {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+
+  &.show {
+    zoom: 1;
+    filter: alpha(opacity=100);
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+  }
+
+  img {
+    z-index: 1;
+    width: 10px;
+    filter: invert(1);
+  }
+}
+
+.infobox {
+  position: relative;
+  background: #FFF;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  background-clip: padding-box;
+
+  @media screen and (min-width: $mobile) {
+    max-width: 60vw;
+  }
+
+  .infobox-data {
+    padding: 2rem 1rem;
+
+    @media screen and (min-width: $mobile) {
+      padding: 2rem;
+    }
+
+    .infobox-title {
+      @include font-semibold;
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .infobox-address {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .infobox-contact {
+      display: table;
+      text-align: center;
+      margin: 0.5rem auto 0 auto;
+
+      i {
+        font-size: 12px;
+        margin-right: 0.5rem;
+        color: $main-color;
+      }
+
+      span {
+        @include font-regular;
+        font-size: 14px;
+      }
+
+      &:hover span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .infobox-buttons {
+    display: flex;
+
+    .common-button {
+      flex: 1;
+      border-radius: 0;
+
+      @media screen and (min-width: $mobile) {
+        padding: 1.25rem 3rem;
+      }
+
+      i,
+      span {
+        color: #FFF;
+      }
+
+      i {
+        margin-right: .5rem;
+        font-size: 18px;
+      }
+    }
+  }
+}

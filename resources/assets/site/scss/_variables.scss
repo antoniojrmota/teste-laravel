@@ -1,0 +1,50 @@
+/*
+
+  VARS.SCSS
+
+  EZOOM
+  Rodrigo Nishino <rodrigo.nishino@ezoom.com.br>
+
+  MOBILE FIRST!
+
+  USE VARIÁVEIS NATIVAS DE CSS AQUI
+  PARA QUE ELAS POSSAM SER AJUSTADAS
+  POR ALGUM SCRIPT LÁ NO FRONT
+  EVENTUALMENTE NÉ
+
+*/
+
+:root {
+  // SCREEN SIZES
+  --mobile: 425px;
+  --tablet: 768px;
+  --laptop: 1440px;
+
+  --sectionPadding: 32px; // <-- MOBILE FIRST
+
+  --stylishHeight: 80vh;
+
+  --cardBorder: 1px solid red;
+
+  @media(min-width: var(--tablet)) {
+    --sectionPadding: 100px;
+    --stylishHeight: 100vh;
+  }
+
+}
+
+$max-width: 1920px;
+$laptop: 1250px;
+$mobile: 960px;
+$phone: 425px;
+
+// COLORS
+$main-color: #EF7D00;
+$secondary-color: #005BA9;
+$border-color: #E0E0E0;
+$hover-color: #ce6a00;
+$text-color: #232323;
+$light-text-color: #565656;
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+@import '_mixins.scss';

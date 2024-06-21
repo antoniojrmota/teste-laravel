@@ -1,0 +1,17 @@
+//
+// geo-point.scss
+//
+
+.address-wrapper
+{
+
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 5fr;
+
+  #address-map
+  {
+    height: 100%;
+  }
+
+}

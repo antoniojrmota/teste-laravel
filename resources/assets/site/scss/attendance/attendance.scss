@@ -1,0 +1,152 @@
+@import '../_variables.scss';
+
+#reporting-channel {
+    #content {
+        max-width: 600px;
+        margin: 6rem auto;
+        text-align: center;
+        color: $text-color;
+
+        .content-title {
+            @include font-regular;
+            font-size: 20px;
+        }
+
+        .common-text {
+            margin: 2rem 0;
+        }
+
+        .common-button {
+            display: inline-block;
+        }
+    }
+}
+
+#faq {
+    #content {
+        max-width: 1080px;
+        margin: 3rem auto;
+        color: $text-color;
+
+        @media screen and (min-width: $mobile) {
+            margin: 6rem auto;
+        }
+
+        .content-title {
+            @include font-regular;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 3rem;
+
+            @media screen and (min-width: $mobile) {
+                font-size: 18px;
+            }
+        }
+
+        .content-faq {
+            @media screen and (min-width: $mobile) {
+                column-count: 2;
+                column-gap: 8%;
+            }
+
+            .faq-item {
+                margin-bottom: 2rem;
+
+                .faq-item-title {
+                    @include font-medium;
+                    margin-bottom: .5rem;
+                    line-height: 1.5;
+                    font-size: 15px;
+                }
+
+                .faq-item-text {
+                    @include font-light;
+                    color: #8b8b8b;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+#funding {
+    #content {
+        max-width: 1080px;
+        margin: 3rem auto;
+        color: $text-color;
+        text-align: center;
+
+        @media screen and (min-width: $mobile) {
+            margin: 6rem auto;
+        }
+
+        .content-title {
+            @include font-regular;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+
+            @media screen and (min-width: $mobile) {
+                font-size: 20px;
+            }
+        }
+
+        .note {
+            @include font-regular;
+            font-size: 10px;
+            color: #ababab;
+            margin-top: 1.5rem;
+        }
+
+        .lazyload {
+            margin: 3rem 0;
+            height: 64px;
+
+            .lazyload-image {
+                @include dim(auto, 48px);
+
+                @media screen and (min-width: $mobile) {
+                    height: 64px;
+                }
+            }
+        }
+
+        .principles {
+            display: grid;
+            grid-gap: 1rem;
+            text-align: left;
+
+            @media screen and (min-width: $mobile) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .principles-item {
+                padding: 1.5rem 1rem;
+                background-color: #f1f1f1;
+
+                @media screen and (min-width: $mobile) {
+                    padding: 2.5rem;
+                }
+
+                .title {
+                    @include font-semibold;
+                    font-size: 16px;
+                    margin-bottom: .5rem;
+
+                    @media screen and (min-width: $mobile) {
+                        font-size: 18px;
+                        margin-bottom: .75rem;
+                    }
+                }
+
+                .common-text {
+                    font-size: 11px;
+
+                    @media screen and (min-width: $mobile) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

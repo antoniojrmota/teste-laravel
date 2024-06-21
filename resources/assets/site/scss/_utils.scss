@@ -1,0 +1,29 @@
+/*
+
+  UTILS.SCSS
+
+  EZOOM
+  Rodrigo Nishino <rodrigo.nishino@ezoom.com.br>
+
+  MOBILE FIRST!
+
+  USE VARIÁVEIS NATIVAS DE CSS AQUI
+  PARA QUE ELAS POSSAM SER AJUSTADAS
+  POR ALGUM SCRIPT LÁ NO FRONT
+  EVENTUALMENTE NÉ
+
+*/
+
+
+/*
+  LINK CUJO HREF COMEÇA COM 'R'
+  ------------------------------
+  Isso serve para localizar links que ainda
+  não possuem rotas traduzidas
+*/
+
+a[href^="r."]
+{
+  color: red !important;
+  font-weight: bold;
+}

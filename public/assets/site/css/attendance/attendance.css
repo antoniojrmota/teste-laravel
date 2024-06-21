@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900);
+@charset "UTF-8";
+/*
+
+  VARS.SCSS
+
+  EZOOM
+  Rodrigo Nishino <rodrigo.nishino@ezoom.com.br>
+
+  MOBILE FIRST!
+
+  USE VARIÁVEIS NATIVAS DE CSS AQUI
+  PARA QUE ELAS POSSAM SER AJUSTADAS
+  POR ALGUM SCRIPT LÁ NO FRONT
+  EVENTUALMENTE NÉ
+
+*/
+:root {
+  --mobile: 425px;
+  --tablet: 768px;
+  --laptop: 1440px;
+  --sectionPadding: 32px;
+  --stylishHeight: 80vh;
+  --cardBorder: 1px solid red;
+}
+@media (min-width: var(--tablet)) {
+  :root {
+    --sectionPadding: 100px;
+    --stylishHeight: 100vh;
+  }
+}
+
+#reporting-channel #content {
+  max-width: 600px;
+  margin: 6rem auto;
+  text-align: center;
+  color: #232323;
+}
+#reporting-channel #content .content-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+#reporting-channel #content .common-text {
+  margin: 2rem 0;
+}
+#reporting-channel #content .common-button {
+  display: inline-block;
+}
+
+#faq #content {
+  max-width: 1080px;
+  margin: 3rem auto;
+  color: #232323;
+}
+@media screen and (min-width: 960px) {
+  #faq #content {
+    margin: 6rem auto;
+  }
+}
+#faq #content .content-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 960px) {
+  #faq #content .content-title {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 960px) {
+  #faq #content .content-faq {
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 8%;
+         column-gap: 8%;
+  }
+}
+#faq #content .content-faq .faq-item {
+  margin-bottom: 2rem;
+}
+#faq #content .content-faq .faq-item .faq-item-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  font-size: 15px;
+}
+#faq #content .content-faq .faq-item .faq-item-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #8b8b8b;
+  font-size: 13px;
+}
+
+#funding #content {
+  max-width: 1080px;
+  margin: 3rem auto;
+  color: #232323;
+  text-align: center;
+}
+@media screen and (min-width: 960px) {
+  #funding #content {
+    margin: 6rem auto;
+  }
+}
+#funding #content .content-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 960px) {
+  #funding #content .content-title {
+    font-size: 20px;
+  }
+}
+#funding #content .note {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #ababab;
+  margin-top: 1.5rem;
+}
+#funding #content .lazyload {
+  margin: 3rem 0;
+  height: 64px;
+}
+#funding #content .lazyload .lazyload-image {
+  height: 48px;
+  width: auto;
+}
+@media screen and (min-width: 960px) {
+  #funding #content .lazyload .lazyload-image {
+    height: 64px;
+  }
+}
+#funding #content .principles {
+  display: grid;
+  grid-gap: 1rem;
+  text-align: left;
+}
+@media screen and (min-width: 960px) {
+  #funding #content .principles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#funding #content .principles .principles-item {
+  padding: 1.5rem 1rem;
+  background-color: #f1f1f1;
+}
+@media screen and (min-width: 960px) {
+  #funding #content .principles .principles-item {
+    padding: 2.5rem;
+  }
+}
+#funding #content .principles .principles-item .title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 960px) {
+  #funding #content .principles .principles-item .title {
+    font-size: 18px;
+    margin-bottom: 0.75rem;
+  }
+}
+#funding #content .principles .principles-item .common-text {
+  font-size: 11px;
+}
+@media screen and (min-width: 960px) {
+  #funding #content .principles .principles-item .common-text {
+    font-size: 12px;
+  }
+}

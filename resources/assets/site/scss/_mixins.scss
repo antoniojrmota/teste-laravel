@@ -1,0 +1,196 @@
+///////////////////////////////////
+/////////// ATALHOS ///////////////
+///////////////////////////////////
+
+@mixin dim($width: auto, $height: auto) {
+  height: $height;
+  width: $width;
+}
+
+@mixin iblock($vertical: top) {
+  display: inline-block;
+  vertical-align: $vertical;
+}
+
+@mixin dflex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin justify {
+  text-align: justify;
+
+  >* {
+    position: relative;
+    top: 1.202em;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    margin-bottom: -1.202em;
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@mixin limiter($width: $full-width) {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100px;
+  max-width: $width;
+  width: 100%;
+}
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin postl($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin postr($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin posbl($bottom, $left) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin posbr($bottom, $right) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin upper {
+  text-transform: uppercase;
+}
+
+///////////////////////////////////
+/////////// FONTES ////////////////
+///////////////////////////////////
+@mixin font-black {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+@mixin font-extrabold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+@mixin font-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+@mixin font-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+@mixin font-medium {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+@mixin font-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-light {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+@mixin font-extralight {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+@mixin font-thin {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+}
+
+///////////////////////////////////
+/////////// COLORS ////////////////
+///////////////////////////////////
+@mixin default {
+  background-color: $default-bgcolor;
+}
+
+@mixin danger {
+  background-color: $danger-bgcolor;
+}
+
+@mixin info {
+  background-color: $info-bgcolor;
+}
+
+@mixin primary {
+  background-color: $primary-bgcolor;
+}
+
+@mixin success {
+  background-color: $success-bgcolor;
+}
+
+@mixin warning {
+  background-color: $warning-bgcolor;
+}
+
+///////////////////////////////////
+/////////// MIXINS ////////////////
+///////////////////////////////////
+@mixin fsize($sizeValue: 15px) {
+  font-size: $sizeValue;
+}
+
+@mixin autofill($bg: #fff, $color: $text-color) {
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $bg inset;
+    -webkit-text-fill-color: $color !important;
+  }
+}
+
+@mixin slick-margin($margin: 10px) {
+  .slick-slide {
+    margin: 0 ($margin / 2);
+  }
+
+  .slick-list {
+    margin: 0 -($margin / 2);
+  }
+}

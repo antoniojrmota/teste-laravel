@@ -1,0 +1,30 @@
+/*
+
+  STYLISH.SCSS
+
+  EZOOM
+  Rodrigo Nishino <rodrigo.nishino@ezoom.com.br>
+
+  Stylish é um swiper que altera o bg geral ...
+  útil para banners
+
+*/
+
+.stylish {
+
+  position: relative;
+  height: var(--stylishHeight);
+
+  background-size: cover;
+  background-position: center;
+
+
+	.txt {
+
+    position: absolute;
+    bottom: var(--sectionPadding);
+    left: var(--sectionPadding);
+
+  }
+
+}

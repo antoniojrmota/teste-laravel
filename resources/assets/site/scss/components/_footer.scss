@@ -1,0 +1,215 @@
+#footer {
+  background-image: linear-gradient(#1D1D1B 40%, #272727);
+
+  .companies-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    .companies-item {
+      filter: grayscale(100%);
+      transition: filter .5s;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+
+    @media screen and (min-width: $mobile) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 0 15%;
+    }
+
+    .lazyload {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .lazyload-image {
+        @include dim(auto, auto);
+        max-height: 30px;
+        max-width: 90px;
+        opacity: .6;
+
+        @media screen and (min-width: $mobile) {
+          max-height: 47px;
+          max-width: 136px;
+          transition: opacity .2s ease-in-out;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: stretch;
+
+    @media screen and (min-width: $mobile) {
+      flex-direction: row;
+
+      .menu-list {
+        display: flex !important;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .menu-group {
+          display: inline-block;
+          margin: 1rem .5rem;
+
+          a {
+            display: block;
+            margin: .5rem 0;
+
+            &.menu-group-title {
+              span {
+                @include font-medium;
+                @include fsize(14px);
+                margin-bottom: 1.5rem;
+                text-transform: uppercase;
+                color: #FFF;
+              }
+            }
+
+            span {
+              @include font-regular;
+              @include fsize(14px);
+              color: #ababab;
+              display: block;
+              line-height: 2;
+              transition: color .2s ease-in-out;
+
+              &:hover {
+                color: #e3e3e3;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .menu-list {
+      display: none;
+    }
+
+    .left {
+      width: 100%;
+      text-align: center;
+      padding: 1rem 1.5rem;
+
+      @media screen and (min-width: $mobile) {
+        padding: 2rem 5%;
+        text-align: left;
+        width: 70%;
+        background-image: radial-gradient(farthest-side at -50% 100%, #454545, #1D1D1B);
+
+        .menu-list {
+          .menu-group {
+            width: calc(100% / 3 - 1rem);
+
+            &:nth-child(1),
+            &:nth-child(2) {
+              width: calc(50% - 1rem);
+            }
+          }
+        }
+      }
+
+      .logo {
+        margin: 1.5rem 0;
+
+        svg {
+          @include dim(auto, 24px);
+        }
+      }
+
+      .links {
+        width: 100%;
+        margin: 1.5rem 0;
+
+        a {
+          display: inline-block;
+
+          &:not(:last-child) {
+            margin-right: 1.5rem;
+          }
+
+          span {
+            @include font-light;
+            @include fsize(12px);
+            color: #f1f1f1;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .note {
+        @include font-medium;
+        @include fsize(11px);
+        color: #ababab;
+      }
+
+      .ezoom-logo {
+        margin: 1.5rem 0;
+
+        svg {
+          @include dim(auto, 8px);
+          fill: #ababab;
+        }
+      }
+    }
+
+    .right {
+      padding: 2rem 1.5rem;
+      width: 100%;
+
+      @media screen and (min-width: $mobile) {
+        padding: 2rem 5%;
+        text-align: left;
+        width: 30%;
+        background-image: radial-gradient(farthest-side at 0% 125%, #2b2b2b, #21211f);
+      }
+
+      .socials {
+        padding: 2.5rem 0;
+        text-align: center;
+        position: relative;
+
+        @media screen and (min-width: $mobile) {
+          text-align: left;
+        }
+
+        .socials-title {
+          @include font-medium;
+          @include fsize(14px);
+          display: block;
+          color: #FFF;
+          text-transform: uppercase;
+          margin-bottom: 1.5rem;
+        }
+
+        .socials-list {
+          .socials-item {
+            display: inline-block;
+            margin: 0 .75rem;
+
+            @media screen and (min-width: $mobile) {
+              margin: 0 .5rem;
+            }
+
+            svg {
+              @include dim(24px, 24px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

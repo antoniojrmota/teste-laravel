@@ -1,0 +1,10 @@
+//
+// _details.scss
+//
+
+input[type='datetime-local']
+{
+  border: 1px solid $input-border-color;
+  padding: 6px 10px;
+  border-radius: $input-border-radius;
+}

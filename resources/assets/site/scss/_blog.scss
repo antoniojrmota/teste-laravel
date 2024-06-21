@@ -1,0 +1,114 @@
+#blog {
+  padding: 5rem 0;
+  background-color: #F1F1F1;
+
+  .blog-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      @include font-semibold;
+      font-size: 28px;
+
+      @media screen and (min-width: $mobile) {
+        font-size: 36px;
+      }
+    }
+
+    .common-button {
+      padding: 0.75rem 1.5rem;
+      margin: 0;
+    }
+  }
+
+  .blog-swiper {
+    padding: 4rem 0;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        position: relative;
+        min-height: 360px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:hover {
+          .swiper-slide-image {
+            &::before {
+              opacity: .3;
+            }
+          }
+        }
+
+        .swiper-slide-image {
+          @include dim(100%, 360px);
+
+          &::before {
+            content: '';
+            @include dim(100%, 100%);
+            @include postl(0, 0);
+            transition: opacity .2s ease-in-out;
+            background-color: #000;
+            opacity: .4;
+            z-index: 3;
+          }
+        }
+
+        .swiper-slide-info {
+          .slide-content-title {
+            margin: 1.5rem 0 1rem;
+
+            display: flex;
+            justify-content: space-between;
+
+            span {
+              @include font-regular;
+              font-size: 18px;
+              display: block;
+              line-height: 1.5;
+              color: #2d2d2d;
+
+              @media screen and (min-width: $mobile) {
+                font-size: 22px;
+                width: 80%;
+              }
+            }
+
+            svg {
+              @media screen and (min-width: $mobile) {
+                @include dim(32px, auto);
+              }
+
+              path {
+                stroke: #2d2d2d;
+              }
+            }
+          }
+
+          .slide-content-date {
+            @include font-regular;
+            font-size: 11px;
+            color: $light-text-color;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .swiper-pagination {
+      @include dim(100%, 1px);
+      @include posbl(0, 50%);
+      transform: translateX(-50%);
+      top: unset;
+      background-color: #d7d7d7;
+      border-radius: 20px;
+
+      .swiper-pagination-progressbar-fill {
+        background-color: $main-color;
+        border-radius: 20px;
+      }
+    }
+  }
+}

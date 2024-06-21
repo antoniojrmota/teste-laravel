@@ -1,0 +1,239 @@
+/*
+  APP.SCSS
+
+  EZOOM
+  Rodrigo Nishino <rodrigo.nishino@ezoom.com.br>
+*/
+
+@import '_variables.scss';
+@import '_reset.scss';
+@import '_fonts.scss';
+@import '_typography.scss';
+@import '_utils.scss';
+@import '_lazyload.scss';
+@import '_swiper-bundle.min.scss';
+
+// HEADER
+@import 'components/_header.scss';
+
+// FOOTER
+@import 'components/_footer.scss';
+
+// NEWSLETTER
+@import 'components/_newsletter.scss';
+
+// BANNER
+@import 'components/_banner.scss';
+
+// TABS
+@import 'components/_tabs.scss';
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+  height: 7px;
+  background-color: fade(#CCC, 50%);
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $main-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darken($main-color, 5%);
+}
+
+body {
+  &.menu-opened {
+    overflow-y: hidden;
+  }
+}
+
+#layout-wrapper {
+  position: relative;
+  max-width: $max-width;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.common-limiter {
+  position: relative;
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+  max-width: 1780px;
+
+  @media screen and (min-width: $mobile) {
+    width: calc(100% - 3rem);
+  }
+}
+
+.common-button {
+  border: none;
+  padding: .75rem 3rem;
+  background-color: $main-color;
+  border-radius: 40px;
+  transition: background .2s ease-in-out;
+  cursor: pointer;
+  margin: .5rem auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    @include font-medium;
+    @include fsize(13px);
+    color: #FFF;
+  }
+
+  svg {
+    @include dim(16px, 16px);
+    vertical-align: middle;
+    margin-left: .5rem;
+  }
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &.light-button {
+    background-color: #FFF;
+
+    span {
+      @include font-semibold;
+      color: $text-color;
+    }
+
+    svg {
+      path {
+        stroke: $text-color;
+      }
+    }
+
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+
+  &.dark-button {
+    background-color: #232323;
+
+    span {
+      @include font-semibold;
+      color: #FFF;
+    }
+
+    svg {
+      path {
+        stroke: #FFF;
+      }
+    }
+
+    &:hover {
+      background-color: #363636;
+    }
+  }
+}
+
+.common-text {
+  @include font-regular;
+  font-size: 12px;
+  color: $light-text-color;
+  line-height: 1.5;
+
+  @media screen and (min-width: $mobile) {
+    font-size: 14px;
+  }
+}
+
+.common-link {
+  display: inline-block;
+  position: relative;
+  padding: .5rem 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    @include posbl(0, 0);
+    @include dim(100%, 1px);
+    background-color: $main-color;
+    // transition: width .2s ease-in-out;
+  }
+
+  &:hover {
+    // &::before{
+    //     width: 100%;
+    // }
+  }
+
+  span {
+    @include font-medium;
+    font-size: 12px;
+  }
+}
+
+// google autocomplete
+.pac-container {
+  border: 1px solid #c7c7c7;
+  -webkit-border-radius: 8px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 8px;
+  -moz-background-clip: padding;
+  border-radius: 8px;
+  background-clip: padding-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  .pac-item {
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    font-family: embraco_beausansregular;
+  }
+}
+
+.pac-logo:after {
+  display: none;
+}
+
+.mfp-figure {
+  span.download {
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    font-size: 1em;
+    opacity: .65;
+    z-index: 1047;
+
+    a {
+      @include font-light;
+      margin: 0 5px;
+      color: white;
+      font-size: 15px;
+      display: none;
+
+      &:hover {
+        color: #f48120;
+      }
+
+      &:first-child {
+        margin-left: 15px;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}

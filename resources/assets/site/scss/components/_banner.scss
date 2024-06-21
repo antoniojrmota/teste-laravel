@@ -1,0 +1,106 @@
+#common-banner {
+  @include dim(100%, 400px);
+  position: relative;
+  padding: 1rem 0;
+
+  @media screen and (min-width: $mobile) {
+    height: 450px;
+  }
+
+  .common-banner-background {
+    @include dim(100%, 100%);
+    @include postl(0, 0);
+    z-index: 1;
+
+    &::before {
+      content: '';
+      @include dim(100%, 100%);
+      @include postl(0, 0);
+      background-color: #000;
+      opacity: .4;
+      z-index: 3;
+    }
+  }
+
+  .common-banner-content {
+    @include dim(100%, calc(100% - 134.2px));
+    @include posbl(0, 0);
+
+    @include font-regular;
+    z-index: 4;
+    color: #FFF;
+    line-height: 1.5;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .common-banner-label {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .5rem;
+    }
+
+    .common-banner-title {
+      font-weight: 600;
+      font-size: 32px;
+    }
+  }
+
+  .breadcrumb {
+    @include posbl(0, 50%);
+    transform: translate(-50%, 50%);
+    background-color: #FFF;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
+    padding: .75rem 1.5rem;
+    border-radius: 50px;
+    z-index: 5;
+    width: 85%;
+
+    @media screen and (min-width: $mobile) {
+      width: fit-content;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .breadcrumb-item {
+      margin: .3rem .4rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &.active {
+        span {
+          color: $light-text-color;
+        }
+      }
+
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          @include dim(8px, 8px);
+          background: url('/site/svg/angle-right.svg') no-repeat center center;
+          background-size: contain;
+          margin-left: .8rem;
+        }
+      }
+
+      svg {
+        @include dim(18px, 18px);
+        vertical-align: middle;
+      }
+
+      span {
+        @include font-medium;
+        color: #ababab;
+        font-size: 12px;
+      }
+    }
+  }
+}
