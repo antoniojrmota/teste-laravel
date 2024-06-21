@@ -12,13 +12,13 @@
 return [
 
   // header
-  'collection'          => 'Marcopolo Collection',
+  'collection'          => 'Deux Collection',
   'codigodeconduta'     => 'Code of conduct',
   'politicaprivacidade' => 'Privacy Policy',
   'ouvidoria'           => 'Ombudsman',
   'quemsomos'           => 'Who we are',
   'institucional'       => 'Institutional',
-  'memoria'             => 'Marcopolo memory',
+  'memoria'             => 'Deux memory',
   'negocios'            => 'Business',
   'marcoprev'           => 'Marcoprev',
   'certif'              => 'Certifications',
@@ -27,22 +27,22 @@ return [
   'investidores'        => 'Investors',
   'comunicacao'         => 'Communication',
   'career'              => 'Career',
-  'grupo'               => 'Marcopolo Group',
+  'grupo'               => 'Deux Group',
 
   // Home
-  'empresasGrupo'      => 'Companies of the <b>Marcopolo Group</b>',
+  'empresasGrupo'      => 'Companies of the <b>Deux Group</b>',
   'tecnologiaInovacao' => '<h2>Technology</h2><h3>and Innovation</h3>',
   'Know'               => 'Know',
 
   // Newsletter
   'newsletter'      => '<h3>Get our</h3><h4>News</h4>',
-  'newsletter.help' => 'Fill in the fields on the side and receive news from Marcopolo Group.',
+  'newsletter.help' => 'Fill in the fields on the side and receive news from Deux Group.',
   'agreeTerms'      => 'I agree with the <b>Terms of Use</b>',
   'name'            => 'NAME',
 
   // footer
-  'copyright'       => 'Marcopolo S.A. is a company of the Marcopolo Group.',
-  'contatosegmarco' => 'ContatoSeguro Marcopolo',
+  'copyright'       => 'Deux S.A. is a company of the Deux Group.',
+  'contatosegmarco' => 'ContatoSeguro Deux',
   'faq'             => 'Frequently Asked Questions',
   'work with us'    => 'work with us',
   'suppliers'       => 'Suppliers',

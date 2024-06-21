@@ -11,7 +11,7 @@
 
 return [
 
-  'collection'  => '/about/marcopolo-collection',
+  'collection'  => '/about/deux-collection',
   'conduta'     => '/code-of-conduct',
   'privacidade' => '/privacy-policy',
   'ouvidoria'   => '/ombudsman',

@@ -71,7 +71,7 @@ class WpFeed
           ]
         ]);
 
-        $url = 'https://viajante.marcopolo.com.br/' . $category . 'feed/atom';
+        $url = '' . $category . 'feed/atom';
         if ($search)
           $url .= '?s=' . $search;
 

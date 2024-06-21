@@ -11,6 +11,6 @@
 
 return [
 
-  'collection' => '/quem-somos/marcopolo-collection',
+  'collection' => '/quem-somos/collection',
   
 ];

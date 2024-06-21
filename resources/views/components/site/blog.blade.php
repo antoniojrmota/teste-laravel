@@ -4,7 +4,7 @@
   <div class="common-limiter">
     <div class="blog-title" {{ $attributes }}>
       <h2 class="title">{{ ('Blog Viajante') }}</h2>
-      <a href="https://viajante.marcopolo.com.br/" class="common-button dark-button" target="_blank">
+      <a href="" class="common-button dark-button" target="_blank">
         <span>{{ __('Acessar agora') }}</span>
         @svg('site-arrow-right')
       </a>

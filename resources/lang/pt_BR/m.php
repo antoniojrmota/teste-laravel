@@ -12,6 +12,6 @@
 return [
 
   // Header
-  'collection' => 'Marcopolo Collection',
+  'collection' => 'Deux Collection',
   
 ];

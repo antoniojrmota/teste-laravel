@@ -19,7 +19,7 @@
       </div>
 
       <div class="logo">
-        <a href="{{ localized_route('site.home.index') }}" title="{{ 'Marcopolo' }}"> @svg('site-logo') </a>
+        <a href="{{ localized_route('site.home.index') }}" title="{{ 'Deux' }}"> @svg('site-logo') </a>
       </div>
 
       <span class="note"> {{ __('Imagens meramente ilustrativas.') }} </span>

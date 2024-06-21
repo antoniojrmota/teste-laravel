@@ -5,7 +5,7 @@
       <a href="{{ localized_route('site.attendance.index') }}" class="menu-item"><span>{{ __('Atendimento') }}</span></a>
     </nav>
     <div class="main-menu-item logo">
-      <a href="{{ localized_route('site.home.index') }}" title="{{ 'Marcopolo' }}">
+      <a href="{{ localized_route('site.home.index') }}" title="{{ 'Deux' }}">
         @svg('site-logo')
       </a>
     </div>
@@ -40,7 +40,7 @@
   <div class="mobile-menu">
     <div class="menu-header">
       <div class="menu-header-item first-item">
-        <a href="{{ localized_route('site.home.index') }}" class="logo" title="{{ 'Marcopolo' }}">
+        <a href="{{ localized_route('site.home.index') }}" class="logo" title="{{ 'Deux' }}">
           @svg('site-logo')
         </a>
         <button class="close"> @svg('site-close') </button>
