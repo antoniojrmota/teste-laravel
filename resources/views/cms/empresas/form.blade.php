@@ -32,7 +32,7 @@
               <x-form.form-group name="order_by" :type="'number'" :label="__('Ordem')" value="{{ $register->order_by ?? null }}" class="col col-md-6 mb-3" />
 
               <div class="col-12 col-md-3 col-lg-2 mb-3">
-                <x-form.file value="{{ url_add_path('storage/banners/', $register->image ?? null) }}" name="image" :dim="$image_dim ?? null"
+                <x-form.file value="{{ url_add_path('uploads/', $register->image ?? null) }}" name="image" :dim="$image_dim ?? null"
                   :button="__('Nova Imagem')" />
               </div>
             </div>

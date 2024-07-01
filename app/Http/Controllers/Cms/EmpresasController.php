@@ -54,7 +54,7 @@ class EmpresasController extends CmsController
         [
           'name'   => __('Imagem'),
           'column' => function ($register) {
-            return url_add_path('storage/empresas/', $register->image);
+            return asset('uploads/' . $register->image);
           },
           'type'   => 'image'
         ],

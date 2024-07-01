@@ -1677,7 +1677,6 @@ button.swiper-pagination-bullet {
 @media screen and (min-width: 960px) {
   #newsletter .newsletter-wrapper {
     flex-direction: row;
-    padding: 0 15%;
     text-align: right;
   }
 }
