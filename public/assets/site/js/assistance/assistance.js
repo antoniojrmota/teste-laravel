@@ -3668,10 +3668,10 @@ var Assistance = /*#__PURE__*/function () {
       var bounds = new google.maps.LatLngBounds();
       var maxLat = Math.atan(Math.sinh(Math.PI)) * 180 / Math.PI;
       var mapCanvas = document.getElementById('gmaps'),
-          myLatLng = new google.maps.LatLng(-17.8102224, -57.3129829),
+      myLatLng = new google.maps.LatLng(-15.8267, -47.9218),
           mapOptions = {
         center: myLatLng,
-        zoom: 4,
+        zoom: 12, 
         minZoom: 3,
         maxZoom: 17,
         scrollwheel: false,
@@ -3682,10 +3682,10 @@ var Assistance = /*#__PURE__*/function () {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         restriction: {
           latLngBounds: {
-            north: maxLat,
-            south: -maxLat,
-            west: -180,
-            east: 180
+            north: -15.5,
+            south: -16,
+            west: -48,
+            east: -47.5
           },
           strictBounds: true
         }

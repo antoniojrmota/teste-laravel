@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      @if($company->description->facebook || $company->description->instagram || $company->description->linkedin || $company->description->twitter || $company->description->youtube)
+      @if($company->description->facebook || $company->description->instagram || $company->description->linkedin || $company->description->twitter || $company->description->youtube || $company->description->google)
       <div class="socials">
         <span class="socials-title">{{ __('Siga a Deux') }}</span>
         <div class="socials-list">
@@ -58,10 +58,17 @@
           @isset($company->description->youtube)
           <a href="{{ $company->description->youtube }}" target="_blank" class="socials-item"> @svg('site-youtube') </a>
           @endisset
+          @isset($company->description->google)
+          <div class="menu-list">
+            <div class="menu-group">
+               <a class="menu-group-title" target="_blank" href="{{ $company->description->google }}"><span> {{ __('Link Fixo: google') }} </span></a>
+            </div>
+          </div>
+          @endisset
         </div>
       </div>
-      @endif
 
+      @endif
     </div>
   </div>
 </footer>
